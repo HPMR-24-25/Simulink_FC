@@ -8,6 +8,7 @@ simPaths = {
     
     % Sensors
     fullfile('Models', 'Sensors', 'LPS25')
+    fullfile('Models', 'Sensors', 'ICM42688')
     
 };
 
@@ -17,6 +18,7 @@ addpath(simPaths);
 % lpsConsts = getLP25Consts();
 
 sensors.LPS25 = getLP25Consts();
+sensors.ICM42688 = getICM42688Consts();
 
 assignin('base', 'sensors', sensors);
 

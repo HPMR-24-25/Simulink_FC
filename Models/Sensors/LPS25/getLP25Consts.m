@@ -1,5 +1,6 @@
 function consts = getLPS25Consts()
 
+    %% Registers
     reg.ADDR = 0x5c;
     reg.WHOAMI = 0x0f;
     reg.WHO_ID = 0xBD;
@@ -22,5 +23,10 @@ function consts = getLPS25Consts()
     reg.TEMP_H_REG = 0x2C;
 
     consts.reg = reg;
+
+    %% Configurations
+    config.ODR.Hz25 = 0xC0;
+
+    consts.config = config;
 
 end
