@@ -129,5 +129,8 @@ function consts = getICM42688Consts()
     config.accel.ENABLE = 0x02;
     config.gyro.ENABLE  = 0x00;
 
+    config.gyro.RES = 16.4;
+    config.accel.RES = 2048.0;
+
     consts.config = config;
 end

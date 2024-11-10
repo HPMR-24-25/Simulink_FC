@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'FC_Test'.
  *
- * Model version                  : 1.206
+ * Model version                  : 1.234
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov 10 12:34:15 2024
+ * C/C++ source code generated on : Sun Nov 10 16:00:47 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -27,7 +27,6 @@
 #include "rtw_continuous.h"
 #include "rtw_solver.h"
 #include "ext_mode.h"
-#include "main.h"
 #include "mw_stm32_i2c_ll.h"
 #include "mw_stm32_utils.h"
 #endif                                 /* FC_Test_COMMON_INCLUDES_ */
@@ -76,142 +75,152 @@
 #define rtmGetTPtr(rtm)                ((rtm)->Timing.t)
 #endif
 
-/* Block states (default storage) for system '<S19>/I2C Controller Read' */
+/* Block states (default storage) for system '<S15>/I2C Controller Read' */
 typedef struct {
-  stm32cube_blocks_I2CControlle_T obj; /* '<S19>/I2C Controller Read' */
-  boolean_T objisempty;                /* '<S19>/I2C Controller Read' */
+  stm32cube_blocks_I2CControlle_T obj; /* '<S15>/I2C Controller Read' */
+  boolean_T objisempty;                /* '<S15>/I2C Controller Read' */
 } DW_I2CControllerRead_FC_Test_T;
 
-/* Block states (default storage) for system '<S19>/I2C Controller Write' */
+/* Block states (default storage) for system '<S15>/I2C Controller Write' */
 typedef struct {
-  stm32cube_blocks_I2CControl_l_T obj; /* '<S19>/I2C Controller Write' */
-  boolean_T objisempty;                /* '<S19>/I2C Controller Write' */
+  stm32cube_blocks_I2CControl_l_T obj; /* '<S15>/I2C Controller Write' */
+  boolean_T objisempty;                /* '<S15>/I2C Controller Write' */
 } DW_I2CControllerWrite_FC_Test_T;
 
-/* Block states (default storage) for system '<S24>/I2C Controller Write' */
+/* Block states (default storage) for system '<S20>/I2C Controller Write' */
 typedef struct {
-  stm32cube_blocks_I2CControl_l_T obj; /* '<S24>/I2C Controller Write' */
-  boolean_T objisempty;                /* '<S24>/I2C Controller Write' */
+  stm32cube_blocks_I2CControl_l_T obj; /* '<S20>/I2C Controller Write' */
+  boolean_T objisempty;                /* '<S20>/I2C Controller Write' */
 } DW_I2CControllerWrite_FC_Te_f_T;
 
 /* Block signals (default storage) */
 typedef struct {
-  real_T pressure;                     /* '<S27>/MATLAB Function' */
-  real_T WhoIsCheck;                   /* '<S26>/CheckWhoIs' */
-  real_T WhoIsCheck_e;                 /* '<S11>/CheckWhoIs' */
-  uint8_T BitwiseOR;                   /* '<S24>/Bitwise OR' */
-  boolean_T DigitalPortRead;           /* '<S5>/Digital Port Read' */
+  real_T pressure;                     /* '<S23>/MATLAB Function' */
+  real_T WhoIsCheck;                   /* '<S22>/CheckWhoIs' */
+  real_T OutportBufferForIMU_Data;     /* '<S5>/OutportBufferForIMU_Data' */
+  real_T WhoIsCheck_e;                 /* '<S7>/CheckWhoIs' */
+  uint8_T dataRead[12];                /* '<S5>/I2C Controller Read' */
+  uint8_T BitwiseOR;                   /* '<S20>/Bitwise OR' */
+  uint8_T BitwiseOR1;                  /* '<S20>/Bitwise OR1' */
 } B_FC_Test_T;
 
 /* Block states (default storage) for system '<Root>' */
 typedef struct {
-  stm32cube_blocks_I2CControl_l_T obj; /* '<S28>/I2C Controller Write' */
-  stm32cube_blocks_I2CControl_l_T obj_c;/* '<S18>/I2C Controller Write8' */
-  stm32cube_blocks_I2CControl_l_T obj_a;/* '<S18>/I2C Controller Write6' */
-  stm32cube_blocks_I2CControl_l_T obj_f;/* '<S18>/I2C Controller Write5' */
-  stm32cube_blocks_I2CControl_l_T obj_c2;/* '<S18>/I2C Controller Write4' */
-  stm32cube_blocks_I2CControl_l_T obj_l;/* '<S17>/I2C Controller Write5' */
-  stm32cube_blocks_I2CControl_l_T obj_g;/* '<S17>/I2C Controller Write4' */
-  stm32cube_blocks_I2CControl_l_T obj_h;/* '<S17>/I2C Controller Write3' */
-  stm32cube_blocks_I2CControl_l_T obj_cm;/* '<S14>/I2C Controller Write' */
-  stm32cube_blocks_I2CControlle_T obj_b;/* '<S27>/I2C Controller Read2' */
-  stm32cube_blocks_I2CControlle_T obj_gt;/* '<S27>/I2C Controller Read1' */
-  stm32cube_blocks_I2CControlle_T obj_gm;/* '<S27>/I2C Controller Read' */
-  stm32cube_blocks_I2CControlle_T obj_o;/* '<S26>/I2C Controller Read' */
-  stm32cube_blocks_I2CControlle_T obj_n;/* '<S11>/I2C Controller Read' */
-  stm32cube_blocks_I2CControlle_T obj_j;/* '<S18>/I2C Controller Read3' */
-  stm32cube_blocks_I2CControlle_T obj_fu;/* '<S18>/I2C Controller Read2' */
-  stm32cube_blocks_I2CControlle_T obj_p;/* '<S17>/I2C Controller Read1' */
-  int8_T ReadPressure_SubsysRanBC;     /* '<S9>/Read Pressure' */
-  int8_T Configure_SubsysRanBC;        /* '<S9>/Configure' */
-  int8_T ConfigureSensors_SubsysRanBC; /* '<S26>/ConfigureSensors' */
-  int8_T Configure_SubsysRanBC_k;      /* '<S8>/Configure' */
-  int8_T ConfigureSensors_SubsysRanBC_m;/* '<S11>/ConfigureSensors' */
-  uint8_T is_active_c2_FC_Test;        /* '<S27>/MATLAB Function' */
-  uint8_T is_active_c4_FC_Test;        /* '<S18>/MATLAB Function1' */
-  uint8_T is_active_c3_FC_Test;        /* '<S18>/MATLAB Function' */
-  uint8_T is_active_c1_FC_Test;        /* '<S17>/MATLAB Function' */
-  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite;/* '<S19>/I2C Controller Write' */
-  DW_I2CControllerRead_FC_Test_T I2CControllerRead_p;/* '<S19>/I2C Controller Read' */
-  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_pnaev;/* '<S19>/I2C Controller Write' */
-  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pnae;/* '<S19>/I2C Controller Read' */
-  DW_I2CControllerWrite_FC_Te_f_T I2CControllerWrite1;/* '<S24>/I2C Controller Write' */
-  DW_I2CControllerWrite_FC_Te_f_T I2CControllerWrite_pnae;/* '<S24>/I2C Controller Write' */
-  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_pna;/* '<S19>/I2C Controller Write' */
-  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pna;/* '<S19>/I2C Controller Read' */
-  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_pn;/* '<S19>/I2C Controller Write' */
-  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pn;/* '<S19>/I2C Controller Read' */
+  stm32cube_blocks_I2CControlle_T obj; /* '<S23>/I2C Controller Read2' */
+  stm32cube_blocks_I2CControlle_T obj_g;/* '<S23>/I2C Controller Read1' */
+  stm32cube_blocks_I2CControlle_T obj_gm;/* '<S23>/I2C Controller Read' */
+  stm32cube_blocks_I2CControlle_T obj_o;/* '<S22>/I2C Controller Read' */
+  stm32cube_blocks_I2CControlle_T obj_d;/* '<S5>/I2C Controller Read' */
+  stm32cube_blocks_I2CControlle_T obj_n;/* '<S7>/I2C Controller Read' */
+  stm32cube_blocks_I2CControlle_T obj_j;/* '<S14>/I2C Controller Read3' */
+  stm32cube_blocks_I2CControlle_T obj_f;/* '<S14>/I2C Controller Read2' */
+  stm32cube_blocks_I2CControlle_T obj_p;/* '<S13>/I2C Controller Read1' */
+  stm32cube_blocks_I2CControlle_T obj_b;/* '<S10>/I2C Controller Read' */
+  stm32cube_blocks_I2CControl_l_T obj_l;/* '<S24>/I2C Controller Write' */
+  stm32cube_blocks_I2CControl_l_T obj_c;/* '<S14>/I2C Controller Write8' */
+  stm32cube_blocks_I2CControl_l_T obj_a;/* '<S14>/I2C Controller Write6' */
+  stm32cube_blocks_I2CControl_l_T obj_fl;/* '<S14>/I2C Controller Write5' */
+  stm32cube_blocks_I2CControl_l_T obj_c2;/* '<S14>/I2C Controller Write4' */
+  stm32cube_blocks_I2CControl_l_T obj_lj;/* '<S13>/I2C Controller Write5' */
+  stm32cube_blocks_I2CControl_l_T obj_gl;/* '<S13>/I2C Controller Write4' */
+  stm32cube_blocks_I2CControl_l_T obj_h;/* '<S13>/I2C Controller Write3' */
+  stm32cube_blocks_I2CControl_l_T obj_cm;/* '<S10>/I2C Controller Write' */
+  int8_T ReadPressure_SubsysRanBC;     /* '<S3>/Read Pressure' */
+  int8_T Configure_SubsysRanBC;        /* '<S3>/Configure' */
+  int8_T ConfigureSensors_SubsysRanBC; /* '<S22>/ConfigureSensors' */
+  int8_T ReadIMU_SubsysRanBC;          /* '<S2>/Read IMU' */
+  int8_T Configure_SubsysRanBC_k;      /* '<S2>/Configure' */
+  int8_T ConfigureSensors_SubsysRanBC_m;/* '<S7>/ConfigureSensors' */
+  uint8_T is_active_c2_FC_Test;        /* '<S23>/MATLAB Function' */
+  uint8_T is_active_c4_FC_Test;        /* '<S14>/MATLAB Function1' */
+  uint8_T is_active_c3_FC_Test;        /* '<S14>/MATLAB Function' */
+  uint8_T is_active_c1_FC_Test;        /* '<S13>/MATLAB Function' */
+  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite;/* '<S15>/I2C Controller Write' */
+  DW_I2CControllerRead_FC_Test_T I2CControllerRead;/* '<S15>/I2C Controller Read' */
+  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_p;/* '<S15>/I2C Controller Write' */
+  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pn;/* '<S15>/I2C Controller Read' */
+  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_pnaevv;/* '<S15>/I2C Controller Write' */
+  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pnaevv;/* '<S15>/I2C Controller Read' */
+  DW_I2CControllerWrite_FC_Te_f_T I2CControllerWrite1;/* '<S20>/I2C Controller Write' */
+  DW_I2CControllerWrite_FC_Te_f_T I2CControllerWrite_pnaev;/* '<S20>/I2C Controller Write' */
+  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_pnae;/* '<S15>/I2C Controller Write' */
+  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pnaev;/* '<S15>/I2C Controller Read' */
+  DW_I2CControllerWrite_FC_Test_T I2CControllerWrite_pna;/* '<S15>/I2C Controller Write' */
+  DW_I2CControllerRead_FC_Test_T I2CControllerRead_pnae;/* '<S15>/I2C Controller Read' */
 } DW_FC_Test_T;
 
 /* Parameters (default storage) */
 struct P_FC_Test_T_ {
-  struct_tdaakOg46zxGeR6JjUMlQG sensors;/* Variable: sensors
+  struct_9JhGOYyIHK3O74lk7jnC2G sensors;/* Variable: sensors
                                          * Referenced by:
-                                         *   '<S26>/CheckWhoIs'
-                                         *   '<S11>/CheckWhoIs'
-                                         *   '<S28>/Constant'
-                                         *   '<S14>/Constant'
-                                         *   '<S17>/Constant5'
-                                         *   '<S17>/Constant6'
-                                         *   '<S17>/Constant7'
-                                         *   '<S18>/Constant'
-                                         *   '<S18>/Constant5'
-                                         *   '<S18>/Constant6'
+                                         *   '<S22>/CheckWhoIs'
+                                         *   '<S7>/CheckWhoIs'
                                          *   '<S24>/Constant'
-                                         *   '<S24>/Constant1'
-                                         *   '<S24>/Constant2'
-                                         *   '<S24>/Constant3'
+                                         *   '<S10>/Constant'
+                                         *   '<S13>/Constant5'
+                                         *   '<S13>/Constant6'
+                                         *   '<S13>/Constant7'
+                                         *   '<S14>/Constant'
+                                         *   '<S14>/Constant5'
+                                         *   '<S14>/Constant6'
+                                         *   '<S20>/Constant'
+                                         *   '<S20>/Constant1'
+                                         *   '<S20>/Constant2'
+                                         *   '<S20>/Constant3'
                                          */
   real_T Constant_Value;               /* Expression: 1
-                                        * Referenced by: '<S11>/Constant'
+                                        * Referenced by: '<S7>/Constant'
                                         */
   real_T Constant1_Value;              /* Expression: 0
-                                        * Referenced by: '<S11>/Constant1'
+                                        * Referenced by: '<S7>/Constant1'
                                         */
   real_T Init_Y0;                      /* Computed Parameter: Init_Y0
-                                        * Referenced by: '<S10>/Init'
+                                        * Referenced by: '<S4>/Init'
                                         */
   real_T Constant_Value_c;             /* Expression: 1
-                                        * Referenced by: '<S26>/Constant'
+                                        * Referenced by: '<S22>/Constant'
                                         */
   real_T Constant1_Value_c;            /* Expression: 0
-                                        * Referenced by: '<S26>/Constant1'
+                                        * Referenced by: '<S22>/Constant1'
                                         */
   real_T Init_Y0_m;                    /* Computed Parameter: Init_Y0_m
-                                        * Referenced by: '<S26>/Init'
+                                        * Referenced by: '<S22>/Init'
                                         */
   real_T Pressure_Y0;                  /* Computed Parameter: Pressure_Y0
-                                        * Referenced by: '<S27>/Pressure'
+                                        * Referenced by: '<S23>/Pressure'
                                         */
   real_T Step_Time;                    /* Expression: 0
-                                        * Referenced by: '<S8>/Step'
+                                        * Referenced by: '<S2>/Step'
                                         */
   real_T Step_Y0;                      /* Expression: 0
-                                        * Referenced by: '<S8>/Step'
+                                        * Referenced by: '<S2>/Step'
                                         */
   real_T Step_YFinal;                  /* Expression: 1
-                                        * Referenced by: '<S8>/Step'
+                                        * Referenced by: '<S2>/Step'
                                         */
   real_T Step_Time_l;                  /* Expression: 0
-                                        * Referenced by: '<S9>/Step'
+                                        * Referenced by: '<S3>/Step'
                                         */
   real_T Step_Y0_d;                    /* Expression: 0
-                                        * Referenced by: '<S9>/Step'
+                                        * Referenced by: '<S3>/Step'
                                         */
   real_T Step_YFinal_p;                /* Expression: 1
-                                        * Referenced by: '<S9>/Step'
+                                        * Referenced by: '<S3>/Step'
                                         */
   uint8_T Constant1_Value_f;           /* Expression: uint8(1)
-                                        * Referenced by: '<S15>/Constant1'
+                                        * Referenced by: '<S11>/Constant1'
                                         */
   uint8_T Constant2_Value;             /* Expression: uint8(2)
-                                        * Referenced by: '<S15>/Constant2'
+                                        * Referenced by: '<S11>/Constant2'
                                         */
   uint8_T Constant1_Value_k;           /* Expression: uint8(0)
-                                        * Referenced by: '<S16>/Constant1'
+                                        * Referenced by: '<S12>/Constant1'
                                         */
   uint8_T Constant2_Value_h;           /* Expression: uint8(0)
-                                        * Referenced by: '<S10>/Constant2'
+                                        * Referenced by: '<S4>/Constant2'
+                                        */
+  uint8_T Constant2_Value_f;           /* Expression: uint8(0)
+                                        * Referenced by: '<S2>/Constant2'
                                         */
 };
 
@@ -277,6 +286,13 @@ extern volatile boolean_T stopRequested;
 extern volatile boolean_T runModel;
 
 /*-
+ * These blocks were eliminated from the model due to optimizations:
+ *
+ * Block '<S5>/Constant' : Unused code path elimination
+ * Block '<S5>/Constant1' : Unused code path elimination
+ */
+
+/*-
  * The generated code includes comments that allow you to trace directly
  * back to the appropriate location in the model.  The basic format
  * is <system>/block_name, where system is the system number (uniquely
@@ -291,35 +307,31 @@ extern volatile boolean_T runModel;
  * Here is the system hierarchy for this model
  *
  * '<Root>' : 'FC_Test'
- * '<S1>'   : 'FC_Test/Digital Port Read'
- * '<S2>'   : 'FC_Test/Digital Port Write'
- * '<S3>'   : 'FC_Test/Sensor Board'
- * '<S4>'   : 'FC_Test/Digital Port Read/ECSoC'
- * '<S5>'   : 'FC_Test/Digital Port Read/ECSoC/ECSimCodegen'
- * '<S6>'   : 'FC_Test/Digital Port Write/ECSoC'
- * '<S7>'   : 'FC_Test/Digital Port Write/ECSoC/ECSimCodegen'
- * '<S8>'   : 'FC_Test/Sensor Board/ICM42688'
- * '<S9>'   : 'FC_Test/Sensor Board/LPS25'
- * '<S10>'  : 'FC_Test/Sensor Board/ICM42688/Configure'
- * '<S11>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig'
- * '<S12>'  : 'FC_Test/Sensor Board/ICM42688/Configure/SwitchBank'
- * '<S13>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors'
- * '<S14>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/EnableSensor'
- * '<S15>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters'
- * '<S16>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetODR'
- * '<S17>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Accel AAF'
- * '<S18>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Gyro AAF'
- * '<S19>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/SwitchBank'
- * '<S20>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/SwitchBank1'
- * '<S21>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Accel AAF/MATLAB Function'
- * '<S22>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Gyro AAF/MATLAB Function'
- * '<S23>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Gyro AAF/MATLAB Function1'
- * '<S24>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetODR/ODR'
- * '<S25>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetODR/SwitchBank1'
- * '<S26>'  : 'FC_Test/Sensor Board/LPS25/Configure'
- * '<S27>'  : 'FC_Test/Sensor Board/LPS25/Read Pressure'
- * '<S28>'  : 'FC_Test/Sensor Board/LPS25/Configure/ConfigureSensors'
- * '<S29>'  : 'FC_Test/Sensor Board/LPS25/Read Pressure/MATLAB Function'
+ * '<S1>'   : 'FC_Test/Sensor Board'
+ * '<S2>'   : 'FC_Test/Sensor Board/ICM42688'
+ * '<S3>'   : 'FC_Test/Sensor Board/LPS25'
+ * '<S4>'   : 'FC_Test/Sensor Board/ICM42688/Configure'
+ * '<S5>'   : 'FC_Test/Sensor Board/ICM42688/Read IMU'
+ * '<S6>'   : 'FC_Test/Sensor Board/ICM42688/SwitchBank'
+ * '<S7>'   : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig'
+ * '<S8>'   : 'FC_Test/Sensor Board/ICM42688/Configure/SwitchBank'
+ * '<S9>'   : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors'
+ * '<S10>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/EnableSensor'
+ * '<S11>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters'
+ * '<S12>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetODR'
+ * '<S13>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Accel AAF'
+ * '<S14>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Gyro AAF'
+ * '<S15>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/SwitchBank'
+ * '<S16>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/SwitchBank1'
+ * '<S17>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Accel AAF/MATLAB Function'
+ * '<S18>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Gyro AAF/MATLAB Function'
+ * '<S19>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetFilters/Set Gyro AAF/MATLAB Function1'
+ * '<S20>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetODR/ODR'
+ * '<S21>'  : 'FC_Test/Sensor Board/ICM42688/Configure/RunConfig/ConfigureSensors/SetODR/SwitchBank1'
+ * '<S22>'  : 'FC_Test/Sensor Board/LPS25/Configure'
+ * '<S23>'  : 'FC_Test/Sensor Board/LPS25/Read Pressure'
+ * '<S24>'  : 'FC_Test/Sensor Board/LPS25/Configure/ConfigureSensors'
+ * '<S25>'  : 'FC_Test/Sensor Board/LPS25/Read Pressure/MATLAB Function'
  */
 #endif                                 /* RTW_HEADER_FC_Test_h_ */
 

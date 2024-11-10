@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'FC_Test'.
  *
- * Model version                  : 1.206
+ * Model version                  : 1.234
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov 10 12:34:15 2024
+ * C/C++ source code generated on : Sun Nov 10 16:00:47 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -23,20 +23,20 @@
 P_FC_Test_T FC_Test_P = {
   /* Variable: sensors
    * Referenced by:
-   *   '<S26>/CheckWhoIs'
-   *   '<S11>/CheckWhoIs'
-   *   '<S28>/Constant'
-   *   '<S14>/Constant'
-   *   '<S17>/Constant5'
-   *   '<S17>/Constant6'
-   *   '<S17>/Constant7'
-   *   '<S18>/Constant'
-   *   '<S18>/Constant5'
-   *   '<S18>/Constant6'
+   *   '<S22>/CheckWhoIs'
+   *   '<S7>/CheckWhoIs'
    *   '<S24>/Constant'
-   *   '<S24>/Constant1'
-   *   '<S24>/Constant2'
-   *   '<S24>/Constant3'
+   *   '<S10>/Constant'
+   *   '<S13>/Constant5'
+   *   '<S13>/Constant6'
+   *   '<S13>/Constant7'
+   *   '<S14>/Constant'
+   *   '<S14>/Constant5'
+   *   '<S14>/Constant6'
+   *   '<S20>/Constant'
+   *   '<S20>/Constant1'
+   *   '<S20>/Constant2'
+   *   '<S20>/Constant3'
    */
   {
     {
@@ -202,7 +202,8 @@ P_FC_Test_T FC_Test_P = {
             9.0,
             12.0
           },
-          2U
+          2U,
+          2048.0
         },
 
         {
@@ -219,94 +220,100 @@ P_FC_Test_T FC_Test_P = {
           {
             0U
           },
-          0U
+          0U,
+          16.4
         }
       }
     }
   },
 
   /* Expression: 1
-   * Referenced by: '<S11>/Constant'
+   * Referenced by: '<S7>/Constant'
    */
   1.0,
 
   /* Expression: 0
-   * Referenced by: '<S11>/Constant1'
+   * Referenced by: '<S7>/Constant1'
    */
   0.0,
 
   /* Computed Parameter: Init_Y0
-   * Referenced by: '<S10>/Init'
+   * Referenced by: '<S4>/Init'
    */
   0.0,
 
   /* Expression: 1
-   * Referenced by: '<S26>/Constant'
+   * Referenced by: '<S22>/Constant'
    */
   1.0,
 
   /* Expression: 0
-   * Referenced by: '<S26>/Constant1'
+   * Referenced by: '<S22>/Constant1'
    */
   0.0,
 
   /* Computed Parameter: Init_Y0_m
-   * Referenced by: '<S26>/Init'
+   * Referenced by: '<S22>/Init'
    */
   0.0,
 
   /* Computed Parameter: Pressure_Y0
-   * Referenced by: '<S27>/Pressure'
+   * Referenced by: '<S23>/Pressure'
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S8>/Step'
+   * Referenced by: '<S2>/Step'
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S8>/Step'
+   * Referenced by: '<S2>/Step'
    */
   0.0,
 
   /* Expression: 1
-   * Referenced by: '<S8>/Step'
+   * Referenced by: '<S2>/Step'
    */
   1.0,
 
   /* Expression: 0
-   * Referenced by: '<S9>/Step'
+   * Referenced by: '<S3>/Step'
    */
   0.0,
 
   /* Expression: 0
-   * Referenced by: '<S9>/Step'
+   * Referenced by: '<S3>/Step'
    */
   0.0,
 
   /* Expression: 1
-   * Referenced by: '<S9>/Step'
+   * Referenced by: '<S3>/Step'
    */
   1.0,
 
   /* Expression: uint8(1)
-   * Referenced by: '<S15>/Constant1'
+   * Referenced by: '<S11>/Constant1'
    */
   1U,
 
   /* Expression: uint8(2)
-   * Referenced by: '<S15>/Constant2'
+   * Referenced by: '<S11>/Constant2'
    */
   2U,
 
   /* Expression: uint8(0)
-   * Referenced by: '<S16>/Constant1'
+   * Referenced by: '<S12>/Constant1'
    */
   0U,
 
   /* Expression: uint8(0)
-   * Referenced by: '<S10>/Constant2'
+   * Referenced by: '<S4>/Constant2'
+   */
+  0U,
+
+  /* Expression: uint8(0)
+   * Referenced by: '<S2>/Constant2'
    */
   0U
 };

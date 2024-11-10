@@ -7,9 +7,9 @@
  *
  * Code generated for Simulink model 'FC_Test'.
  *
- * Model version                  : 1.206
+ * Model version                  : 1.234
  * Simulink Coder version         : 23.2 (R2023b) 01-Aug-2023
- * C/C++ source code generated on : Sun Nov 10 12:34:15 2024
+ * C/C++ source code generated on : Sun Nov 10 16:00:47 2024
  *
  * Target selection: ert.tlc
  * Embedded hardware selection: ARM Compatible->ARM Cortex
@@ -248,15 +248,16 @@ typedef struct {
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_struct_1SpBDgcJwjnmZn6GXisonD_
-#define DEFINED_TYPEDEF_FOR_struct_1SpBDgcJwjnmZn6GXisonD_
+#ifndef DEFINED_TYPEDEF_FOR_struct_18a5RI50ypU4l7UvgftFiB_
+#define DEFINED_TYPEDEF_FOR_struct_18a5RI50ypU4l7UvgftFiB_
 
 typedef struct {
   struct_IyNDJ51doc9bFDl8Fy6vWF ODR;
   struct_F6ifLqEryZukkGd5xUx8sD SCALE;
   struct_RqCDT7rsMsUurKtDxmcohB AAF;
   uint8_T ENABLE;
-} struct_1SpBDgcJwjnmZn6GXisonD;
+  real_T RES;
+} struct_18a5RI50ypU4l7UvgftFiB;
 
 #endif
 
@@ -269,51 +270,52 @@ typedef struct {
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_struct_SvOH6b9TBDxsAM6L9n6vHB_
-#define DEFINED_TYPEDEF_FOR_struct_SvOH6b9TBDxsAM6L9n6vHB_
+#ifndef DEFINED_TYPEDEF_FOR_struct_jMWEpnkdWKWu1tlkge4rEB_
+#define DEFINED_TYPEDEF_FOR_struct_jMWEpnkdWKWu1tlkge4rEB_
 
 typedef struct {
   struct_RqCDT7rsMsUurKtDxmcohB AAF;
   struct_IyNDJ51doc9bFDl8Fy6vWF ODR;
   struct_PM5maQDwjMqukiBhLxJrvE SCALE;
   uint8_T ENABLE;
-} struct_SvOH6b9TBDxsAM6L9n6vHB;
+  real_T RES;
+} struct_jMWEpnkdWKWu1tlkge4rEB;
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_struct_Bs1cPoPtAbtJK6G6E9a7qH_
-#define DEFINED_TYPEDEF_FOR_struct_Bs1cPoPtAbtJK6G6E9a7qH_
+#ifndef DEFINED_TYPEDEF_FOR_struct_jpsdsrSUqXR1Dd2qeb2l5E_
+#define DEFINED_TYPEDEF_FOR_struct_jpsdsrSUqXR1Dd2qeb2l5E_
 
 typedef struct {
   uint8_T SENSOR_ENABLE;
-  struct_1SpBDgcJwjnmZn6GXisonD accel;
-  struct_SvOH6b9TBDxsAM6L9n6vHB gyro;
-} struct_Bs1cPoPtAbtJK6G6E9a7qH;
+  struct_18a5RI50ypU4l7UvgftFiB accel;
+  struct_jMWEpnkdWKWu1tlkge4rEB gyro;
+} struct_jpsdsrSUqXR1Dd2qeb2l5E;
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_struct_6Lzf7raDpptrhyp08vtT8_
-#define DEFINED_TYPEDEF_FOR_struct_6Lzf7raDpptrhyp08vtT8_
+#ifndef DEFINED_TYPEDEF_FOR_struct_nhuitA0dAU6ycJ29DFXEfD_
+#define DEFINED_TYPEDEF_FOR_struct_nhuitA0dAU6ycJ29DFXEfD_
 
 typedef struct {
   struct_kEQnXOta8nanbmzXPJjY9D reg;
   uint8_T WHO_ID;
-  struct_Bs1cPoPtAbtJK6G6E9a7qH config;
-} struct_6Lzf7raDpptrhyp08vtT8;
+  struct_jpsdsrSUqXR1Dd2qeb2l5E config;
+} struct_nhuitA0dAU6ycJ29DFXEfD;
 
 #endif
 
-#ifndef DEFINED_TYPEDEF_FOR_struct_tdaakOg46zxGeR6JjUMlQG_
-#define DEFINED_TYPEDEF_FOR_struct_tdaakOg46zxGeR6JjUMlQG_
+#ifndef DEFINED_TYPEDEF_FOR_struct_9JhGOYyIHK3O74lk7jnC2G_
+#define DEFINED_TYPEDEF_FOR_struct_9JhGOYyIHK3O74lk7jnC2G_
 
 typedef struct {
   struct_J7geYzRFz9Y17paId3MuGD LPS25;
-  struct_6Lzf7raDpptrhyp08vtT8 ICM42688;
-} struct_tdaakOg46zxGeR6JjUMlQG;
+  struct_nhuitA0dAU6ycJ29DFXEfD ICM42688;
+} struct_9JhGOYyIHK3O74lk7jnC2G;
 
 #endif
 
-/* Custom Type definition for MATLABSystem: '<S19>/I2C Controller Read' */
+/* Custom Type definition for MATLABSystem: '<S15>/I2C Controller Read' */
 #include "mw_stm32_i2c_ll.h"
 #include "mw_stm32_i2c_ll.h"
 #include "mw_stm32_i2c_ll.h"
@@ -358,40 +360,6 @@ struct tag_Izy3MhkAN4z9ABEWyrEXwC
 typedef struct tag_Izy3MhkAN4z9ABEWyrEXwC stm32cube_blocks_I2CControl_l_T;
 
 #endif                             /* typedef_stm32cube_blocks_I2CControl_l_T */
-
-#ifndef struct_tag_wiywjhRn0JhvylthmapQgB
-#define struct_tag_wiywjhRn0JhvylthmapQgB
-
-struct tag_wiywjhRn0JhvylthmapQgB
-{
-  int32_T isInitialized;
-};
-
-#endif                                 /* struct_tag_wiywjhRn0JhvylthmapQgB */
-
-#ifndef typedef_stm32cube_blocks_DigitalPortR_T
-#define typedef_stm32cube_blocks_DigitalPortR_T
-
-typedef struct tag_wiywjhRn0JhvylthmapQgB stm32cube_blocks_DigitalPortR_T;
-
-#endif                             /* typedef_stm32cube_blocks_DigitalPortR_T */
-
-#ifndef struct_tag_S5MMpcz8vT0FlmhmEl4q5C
-#define struct_tag_S5MMpcz8vT0FlmhmEl4q5C
-
-struct tag_S5MMpcz8vT0FlmhmEl4q5C
-{
-  int32_T isInitialized;
-};
-
-#endif                                 /* struct_tag_S5MMpcz8vT0FlmhmEl4q5C */
-
-#ifndef typedef_stm32cube_blocks_DigitalPortW_T
-#define typedef_stm32cube_blocks_DigitalPortW_T
-
-typedef struct tag_S5MMpcz8vT0FlmhmEl4q5C stm32cube_blocks_DigitalPortW_T;
-
-#endif                             /* typedef_stm32cube_blocks_DigitalPortW_T */
 
 /* Parameters (default storage) */
 typedef struct P_FC_Test_T_ P_FC_Test_T;
