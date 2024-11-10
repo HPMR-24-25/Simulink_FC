@@ -1,0 +1,2 @@
+syscalls.o: \
+ C:/Users/Blind/Desktop/Workspace/MQP/Simulink_FC/LAMM_FC/STM32CubeIDE/Application/User/Core/syscalls.c
